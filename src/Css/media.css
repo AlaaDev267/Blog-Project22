@@ -1,0 +1,23 @@
+@media ( max-width: 584px) {
+
+.searchInput input{
+  width: 190px;
+}
+
+.searchInput i{
+  position: absolute;
+top: 40%;
+margin-right: -40px;
+color: #cecece;
+
+
+}
+.Grid-card .img-post{
+max-width: 600px;
+min-width: 300px;
+  border-top-left-radius: 20px;
+
+
+}
+
+}
