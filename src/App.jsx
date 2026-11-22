@@ -41,49 +41,45 @@ function Layout() {
 }
 
 function App() {
-
-
-
-
-
-
-
-
-
-
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [
+          {
+            index: true,
+            element: <Home />
+          },
+          {
+            path: "blog",
+            element: <Blog />
+          },
+          {
+            path: "about",
+            element: <AboutUs />
+          },
+          {
+            path: "details/:id",
+            element: <Details />
+          },
+          {
+            path: "blog/:category",
+            element: <Blog />
+          }
+        ]
+      }
+    ],
     {
-      path: "/",
-      element: <Layout />,
-      children: [
-        {
-          index: true,
-          element: <Home />
-        },
-        {
-          path: "blog",
-          element: <Blog />
-        },
-        {
-          path:"about",
-          element: <AboutUs/>
-
-        },
-        {
-          path:"details/:id",
-          element:<Details />
-        },
-
-{
-  path: "blog/:category",
-  element: <Blog />
-}
-
-      ]
+      basename: "/Blog-Project22"
     }
-  ]);
+  );
 
   return <RouterProvider router={router} />;
 }
 
 export default App;
+
+
+
+
